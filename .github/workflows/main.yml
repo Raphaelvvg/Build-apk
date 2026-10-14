@@ -1,0 +1,16 @@
+name: Build Android APK
+
+on:
+  push:
+    tags:
+      - 'v*' # Dispara quando você cria uma nova tag, ex: v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configurar Java
